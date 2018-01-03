@@ -3,7 +3,7 @@ function prueba(nombre:string){
 }
 
 var objeto = {
-  nombre: "Andrés"
+  nombre: "ddzcbzdbvd"
 };
 
 prueba(objeto.nombre);
