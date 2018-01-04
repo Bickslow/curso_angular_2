@@ -29,7 +29,7 @@ function resultadoDoble( a, b ){
 }
 //RESPUESTA
  let funcion = (a:number, b:number)=>(a+b)*2;
- console.log(funcion);
+ console.log(funcion(2,5));
 
 // Función con parametros obligatorios, opcionales y por defecto
 // donde NOMBRE = obligatorio
@@ -49,10 +49,14 @@ function getAvenger2 (nombre:string, poder?:string, arma:string = "auxiliar"){
   if( poder ){
      mensaje = nombre + " tiene el poder de: " + poder + " y un arma: " + arma;
   }else{
-     mensaje = nombre + " tiene un " + poder
+     mensaje = nombre + " tiene un " + arma
   }
   console.log(mensaje);
 }
+
+getAvenger2("hola");
+getAvenger2("hola","adios");
+getAvenger2("hola","adios","sgsg");
 
 
 // Cree una clase que permita manejar la siguiente estructura
@@ -74,4 +78,4 @@ class Rectangulo{
   }
 }
 
-console.log(new Rectangulo(2,5));
+console.log(new Rectangulo(2,5).area());
