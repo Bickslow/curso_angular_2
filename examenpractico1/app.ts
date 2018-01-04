@@ -34,9 +34,9 @@ let batman2:Hero = batman;
 console.log(batman2);
 
 // Convertir esta funcion a una funcion de flecha
-function resultadoDoble( a, b ){
+/*function resultadoDoble( a, b ){
   return (a + b) * 2
-}
+}*/
 //RESPUESTA
  let funcion = (a:number, b:number)=>(a+b)*2;
  console.log(funcion(2,5));
