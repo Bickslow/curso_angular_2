@@ -8,6 +8,16 @@ var PERSONAJE = {
   edad: edad
 };
 
+let nombreTS ="Ricardo Tapia";
+let edadTS =23;
+
+const PERSONAJETS = {
+  nombre: nombreTS,
+  edad: edadTS
+};
+
+console.log(PERSONAJETS);
+
 // Cree una interfaz que sirva para validar el siguiente objeto
 var batman = {
   nombre: "Bruno Díaz",
@@ -17,7 +27,7 @@ var batman = {
 //RESPUESTA
 interface Hero{
   nombre:string,
-  artesMarciales:any
+  artesMarciales:string[]
 }
 
 let batman2:Hero = batman;

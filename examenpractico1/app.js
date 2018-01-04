@@ -5,6 +5,13 @@ var PERSONAJE = {
     nombre: nombre,
     edad: edad
 };
+var nombreTS = "Ricardo Tapia";
+var edadTS = 23;
+var PERSONAJETS = {
+    nombre: nombreTS,
+    edad: edadTS
+};
+console.log(PERSONAJETS);
 // Cree una interfaz que sirva para validar el siguiente objeto
 var batman = {
     nombre: "Bruno Díaz",
