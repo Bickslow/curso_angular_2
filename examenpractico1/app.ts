@@ -34,9 +34,9 @@ let batman2:Hero = batman;
 console.log(batman2);
 
 // Convertir esta funcion a una funcion de flecha
-function resultadoDoble( a, b ){
+/*function resultadoDoble( a, b ){
   return (a + b) * 2
-}
+}*/
 //RESPUESTA
  let funcion = (a:number, b:number)=>(a+b)*2;
  console.log(funcion(2,5));
@@ -45,14 +45,14 @@ function resultadoDoble( a, b ){
 // donde NOMBRE = obligatorio
 //       PODER  = opcional
 //       ARMA   = por defecto = "arco"
-function getAvenger( nombre, poder, arma ){
+/*function getAvenger( nombre, poder, arma ){
   var mensaje;
   if( poder ){
      mensaje = nombre + " tiene el poder de: " + poder + " y un arma: " + arma;
   }else{
      mensaje = nombre + " tiene un " + poder
   }
-};
+};*/
 
 function getAvenger2 (nombre:string, poder?:string, arma:string = "auxiliar"){
   var mensaje;
