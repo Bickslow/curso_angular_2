@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyComponent implements OnInit {
   mostrar:boolean = false;
-  nombres:string[] =["Andrés", "Diego", "Junior", "Daniel"]
+  nombres:string[] =["Andrés", "Diego", "Junior", "Daniel", "Iulia"]
   constructor() { }
 
   ngOnInit() {

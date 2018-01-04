@@ -23,7 +23,7 @@
       <h1>*ngFor</h1>
       <hr>
       <ul class="list-group">
-        <li *ngFor="let nombre of nombres; let i = index" class="list-group-item">{{nombre}}</li>
+        <li *ngFor="let nombre of nombres; let i = index" class="list-group-item">{{i+1}}. {{nombre}}</li>
       </ul>
     </div>
   </div>
