@@ -1,17 +1,17 @@
 
 // Uso de Let y Const
-var nombre = "Ricardo Tapia";
+/*var nombre = "Ricardo Tapia";
 var edad = 23;
 
 var PERSONAJE = {
   nombre: nombre,
   edad: edad
-};
+};*/
 
-let nombreTS ="Ricardo Tapia";
-let edadTS =23;
+let nombreTS:string ="Ricardo Tapia";
+let edadTS:number =23;
 
-const PERSONAJETS = {
+const PERSONAJETS: {nombre:string, edad:number} = {
   nombre: nombreTS,
   edad: edadTS
 };
@@ -80,6 +80,9 @@ class Rectangulo{
   base:number;
   altura:number;
   area:Function = ()=>{
+    return this.base*this.altura;
+  }
+  area2():number{
     return this.base*this.altura;
   }
   constructor (base:number,altura:number){

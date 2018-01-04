@@ -1,10 +1,11 @@
 // Uso de Let y Const
-var nombre = "Ricardo Tapia";
+/*var nombre = "Ricardo Tapia";
 var edad = 23;
+
 var PERSONAJE = {
-    nombre: nombre,
-    edad: edad
-};
+  nombre: nombre,
+  edad: edad
+};*/
 var nombreTS = "Ricardo Tapia";
 var edadTS = 23;
 var PERSONAJETS = {
@@ -20,9 +21,9 @@ var batman = {
 var batman2 = batman;
 console.log(batman2);
 // Convertir esta funcion a una funcion de flecha
-function resultadoDoble(a, b) {
-    return (a + b) * 2;
-}
+/*function resultadoDoble( a, b ){
+  return (a + b) * 2
+}*/
 //RESPUESTA
 var funcion = function (a, b) { return (a + b) * 2; };
 console.log(funcion(2, 5));
@@ -30,16 +31,14 @@ console.log(funcion(2, 5));
 // donde NOMBRE = obligatorio
 //       PODER  = opcional
 //       ARMA   = por defecto = "arco"
-function getAvenger(nombre, poder, arma) {
-    var mensaje;
-    if (poder) {
-        mensaje = nombre + " tiene el poder de: " + poder + " y un arma: " + arma;
-    }
-    else {
-        mensaje = nombre + " tiene un " + poder;
-    }
-}
-;
+/*function getAvenger( nombre, poder, arma ){
+  var mensaje;
+  if( poder ){
+     mensaje = nombre + " tiene el poder de: " + poder + " y un arma: " + arma;
+  }else{
+     mensaje = nombre + " tiene un " + poder
+  }
+};*/
 function getAvenger2(nombre, poder, arma) {
     if (arma === void 0) { arma = "auxiliar"; }
     var mensaje;
@@ -70,6 +69,9 @@ var Rectangulo = /** @class */ (function () {
         this.base = base;
         this.altura = altura;
     }
+    Rectangulo.prototype.area2 = function () {
+        return this.base * this.altura;
+    };
     return Rectangulo;
 }());
 console.log(new Rectangulo(2, 5).area());
