@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class HeroesComponent implements OnInit {
   heroes:Heroe[] = [];
   noResults:string = "";
+  buscando:string = "";
   constructor(private activatedRoute: ActivatedRoute,
               private _heroesService: HeroesService,
               private router:Router) {
@@ -21,11 +22,13 @@ export class HeroesComponent implements OnInit {
     this.activatedRoute.params.subscribe(params => {
       this.noResults = "";
       if(params['nombre']){
+        this.buscando = params['nombre'];
         this.heroes = this._heroesService.buscarHeroe(params['nombre']);
         if(this.heroes.length==0){
           this.noResults = "No se han encontrado resultados";
         }
       }else{
+        this.buscando = "";
         this.heroes = this._heroesService.getHeroes();
       }
     });
