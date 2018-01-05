@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nombre:string ="Andrés";
+  nombre:string = "Andrés";
   arreglo:number[] = [1,2,3,4,5,6,7,8,9,10];
   PI:number = Math.PI;
   a:number = 0.234;
@@ -15,8 +15,8 @@ export class AppComponent {
     nombre: "Andrés",
     edad: 22,
     direccion:{
-      calle:"Calle",
-      case:"Casa"
+      calle: "Calle",
+      case: "Casa"
     }
   }
   valorDePromesa = new Promise((resolve,reject)=>{
@@ -25,5 +25,7 @@ export class AppComponent {
     },3500);
   })
   fecha = new Date();
-  nombre2:string ="anDrés saNCHo ASíN";
+  nombre2:string = "anDrés saNCHo ASíN";
+  video:string = "USriZAMR2nA";
+  activar:boolean = true;
 }
