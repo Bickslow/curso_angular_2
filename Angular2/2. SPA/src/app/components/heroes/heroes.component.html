@@ -1,6 +1,6 @@
 <h1>Héroes <small>Marvel y DC</small></h1>
 <hr>
-
+<h2>{{ noResults }}</h2>
 <div class="card-columns">
   <div *ngFor="let heroe of heroes;let i = index" class="card animated fadeIn fast">
     <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
