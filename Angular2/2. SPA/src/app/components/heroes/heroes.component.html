@@ -1,7 +1,13 @@
 <h1 *ngIf="buscando.length==0">Héroes <small>Marvel y DC</small></h1>
 <h1 *ngIf="!buscando.length==0">Buscando: <small>{{ buscando }}</small></h1>
 <hr>
-<h2>{{ noResults }}</h2>
+<div class="row animated fadeIn fast" *ngIf="heroes.length==0">
+  <div class="col-md-12">
+    <div class="alert alert-info">
+      {{ noResults }}
+    </div>
+  </div>
+</div>
 <div class="card-columns">
   <div *ngFor="let heroe of heroes;let i = index" class="card animated fadeIn fast">
     <img class="card-img-top" [src]="heroe.img" [alt]="heroe.nombre">
