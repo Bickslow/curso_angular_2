@@ -73,3 +73,11 @@ hr{
 .fadeIn {
   animation-name: fadeIn;
 }
+
+.tituloCancion{
+  text-align: center;
+  vertical-align: center;
+}
+.imgTrack{
+  width: 20%;
+}

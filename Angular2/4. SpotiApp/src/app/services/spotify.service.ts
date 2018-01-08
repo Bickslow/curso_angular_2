@@ -1,32 +1,41 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class SpotifyService {
-
+  artistas:any[] = [];
+  urlSpotify ="https://api.spotify.com/v1/";
+  token:string ="BQAfgJ54JSoJ4uWk1XBfpNqlZ6IaAbNLraaEfZxI8CbtAtIoMf6YkHLGA6ATfTJFpzt2TGrS85rrGYmXpVc";
   constructor(public http:HttpClient) {
   }
-
-  getArtistas(){
-    let url:string = "https://api.spotify.com/api/token";
+  private getHeaders():HttpHeaders{
     let headers = new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded'
+      'authorization': 'Bearer '+ this.token
     });
-    let body:any = ({
-      'grant_type': 'client_credentials',
-      'client_id': 'cb07e054c2cc40fd8e0ff116d4161a3f',
-      'client_secret': '38772d378a4d4e9db9a23a2eda259788'
-    });
-    this.http.post(url,{headers:headers,body:body}).subscribe(data =>{
-      console.log(data);
-      /**let url:string = "https://api.spotify.com/v1/search?query=sam+tsui&type=artist&limit=20";
-      let headers = new HttpHeaders({
-        'authorization': 'Bearer BQDwn134AJqTJR3veYvcMWQhDwj6ykDH6AXKJ2xaEV9AyWSWvpYhOCyC9JlIItCVcs5-Ibs539RQ3p3aytU'
-      });
-      this.http.get(url,{headers}).subscribe(data =>{
-        console.log(data);
-      });*/
-    });
+    return headers;
+  }
+  getArtistas(termino:string){
+      let url:string = `${ this.urlSpotify }search?query=${ termino }&type=artist&limit=20`;
+      let headers = this.getHeaders();
+      return this.http.get(url,{headers})
+        .map(resp=>{
+          this.artistas = resp['artists']['items'];
+          return this.artistas;
+        });
+  }
+  getArtista(id:string){
+      let url:string = `${ this.urlSpotify }artists/${ id }`;
+      let headers = this.getHeaders();
+      return this.http.get(url,{headers});
+  }
 
+  getTopTracks(id:string){
+      let url:string = `${ this.urlSpotify }artists/${ id }/top-tracks?country=ES`;
+      let headers = this.getHeaders();
+      return this.http.get(url,{headers})
+        .map(resp=>{
+          return resp['tracks'];
+        });
   }
 }
