@@ -1,0 +1,1 @@
+Se trata de un proyecto ionic del que solo he subido la carpeta src para evitar la subida de archivos innecesarios
